@@ -1,0 +1,388 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height:100vh;
+    /* border:1px solid rgb(210, 164, 90); */
+    font-family: "Italiana", serif;
+    font-weight: 100;
+    font-style: normal;
+    color: #6E8E59;
+    background-color:#F5F5F5;
+}
+
+header{
+    /* border:1px solid blue; */
+    padding:20px 10px;
+    background-color: #CAE0BC;
+    color: #6E8E59;
+}
+
+header h1 {
+    width: 150px;
+}
+
+a {
+    text-decoration: none;
+    color: #6E8E59;
+}
+
+footer {
+    background-color: #CAE0BC;
+    height: 30vh;
+}
+
+
+/* index.html */
+
+#home-upcoming-reminders {
+    margin: auto;
+    /* border:1px solid salmon; */
+    margin-top:100px;
+    padding: 20px 15px;
+    width:80%;
+}
+
+#reminder-container {
+    width: 80%;
+    margin: 0 auto ;
+    padding:10px;
+    margin-top:30px;
+    border:1px solid #6E8E59;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.reminder-info {
+    /* border:1px solid green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.reminder-info h3{
+    /* border:1px solid red; */
+    width:50%;
+    border-bottom: 1px solid #6E8E59;
+    margin:10px;
+}
+
+.reminder-info p {
+    /* border:1px solid red; */
+    border-bottom: 1px solid #6E8E59;
+    margin:10px;
+    
+}
+
+.btns {
+    align-items: center;
+    display: flex;
+    height:100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin:0px auto;
+    width:150px;
+}
+
+.btn{
+    margin:0;
+    border-radius: 50px;
+    color:white;
+    height:40px;
+    width:120px;
+    border:none;
+    font-family: "Italiana", serif;
+    font-size:14px;
+    font-weight: 100;
+    font-style: normal;
+    background-color: #6E8E59;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: #CAE0BC;
+    border:1.3px solid #6E8E59;
+    transition: 0.2s;
+    color:#6E8E59;
+}
+
+.btn:active {
+    background-color: #F5F5F5;
+}
+
+.etc{
+    padding-top:15px;
+    font-size:25px;
+    text-align: center;
+}
+
+/*  add a reminder html */
+#add-reminder-form-box {
+    flex:1;
+    /* border: 1px solid red; */
+}
+
+.form_header {
+    font-weight: 100;
+    text-align: center;
+    padding:20px 0px;
+}
+
+.form_style {
+    border-radius: 15px;
+    border:1px solid #6E8E59;
+    background-color: #CAE0BC;
+    max-width:385px;
+    max-height: 90%;
+    margin:auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding:10px;
+}
+
+.form-ele{
+    /* background-color: #F5F5F5; */
+    display: flex;
+    flex-direction: column;
+    width: 120px;
+    margin:auto;
+    padding-top:10px;
+}
+
+.form-ele input, select {
+    font-family: "Italiana", serif;
+    margin-top:5px;
+    padding:8px;
+    border:none;
+    background-color: #EAFAEA;
+}
+
+.form-ele input:focus, select:focus {
+    outline:none;
+}
+
+.form-btn {
+    margin: auto;
+    margin-top:10px;
+    height:30px;
+}
+
+#success-msg, #failure-msg {
+    text-align: center;
+    background-color: #EAFAEA;
+    width:100px;
+    margin: auto;
+    margin-top: 10px;
+    padding:5px 0px;
+    border-radius: 5px;
+}
+
+#failure-msg {
+    background-color: rgb(249, 225, 225);
+    color:red;
+}
+
+/* display reminders */
+#view-reminders-box {
+    flex:1;
+}
+
+#view-reminders-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#view-reminders-box h2 {
+    margin-top:10px;
+    text-align: center;
+}
+
+#search-bar-container {
+    margin: 10px auto;
+}
+
+#search-bar-container label {
+    font-size: 20px;
+}
+
+#search-bar-container input {
+    padding-left:10px;
+    outline:none;
+    height: 30px;
+    width: 200px;
+    border-radius: 15px;
+}
+
+#smol-search-btn{
+    width:55px;
+    height:25px;
+}
+
+#filter-tags {
+    margin-top:10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.filter-btn{
+    cursor: pointer;
+    height:30px;
+    width:100px; 
+    border-radius: 15px;
+    padding:3px;
+    font-size:12px;
+    color:#6E8E59;
+    background-color: #F5F5F5;
+    font-family: "Italiana", serif;
+    font-size:14px;
+    font-weight: 100;
+    font-style: normal;
+    border:1.3px solid #6E8E59;
+}
+
+.filter-btn:active{
+    background-color: #6E8E59;
+    color:white;
+    height: 32px;
+    width:102px; 
+    transition:0.5s ;
+}
+
+.selected {
+    background-color: #6E8E59;
+    color:white;
+}
+
+#reminders-container {
+    display: flex;
+    flex-direction: column;
+    border:2px solid #6E8E59;
+    max-height: 250px;
+    width:80%;
+    margin:22px auto;
+    overflow: scroll;
+}
+
+.reminder-item {
+    display: flex;
+    flex-direction: row;
+}
+
+.reminder-item p {
+    margin-left: 15px;
+    padding-top:5px;
+}
+
+.reminder-item span:hover {
+    cursor: pointer;
+    color:yellowgreen;
+}
+
+.reminder-item span:active {
+    cursor: pointer;
+    color:rgb(43, 63, 37);
+}
+
+#editing-tools {
+    margin-left: auto;
+    margin-right:20px;
+    padding-top:5px;
+}
+
+#editing-tools span {
+    padding-left:5px;
+}
+
+/*  edit reminder */
+#edit_reminder_form_box {
+    flex:1;
+}
+
+#delete-pop-up {
+    position: absolute;
+    width:300px;
+    height:120px;
+    background-color: white;
+    top:40%;
+    left:35%;
+    border:2px solid #6E8E59;
+    color:black;
+    display: flex;
+    flex-direction: column;
+    padding:10px;
+}
+
+#delete-pop-up h3 {
+    margin-bottom:20px;
+}
+
+#removal-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.removal-btn {
+    border:none;
+    padding:7px 15px;
+    border-radius: 3px;
+}
+
+#delete-reminder {
+    color:rgb(249, 225, 225);
+    background-color: #e14949;
+}
+
+#delete-reminder:hover {
+    color:rgb(255, 245, 245);
+    background-color: #e64f4f;
+    transition:0.2s;
+    cursor: pointer;
+}
+
+#delete-reminder:active {
+    color:rgb(252, 180, 180);
+    background-color: #e64f4f;
+    transition:0.2s;
+    padding:7px 17px;
+}
+
+
+#cancel-delete {
+    color:#e6ffd7;
+    background-color: #6E8E59;
+    transition:0.2s;
+}
+
+#cancel-delete:hover {
+    color:#f4fdee;
+    background-color: #6E8E59;
+    transition:0.2s;
+    cursor: pointer;
+}
+
+#cancel-delete:active {
+    color:#d6f6c1;
+    background-color: #6E8E59;
+    padding:6px 17px;
+}
+
+#delete-pop-up.hidden {
+    display: none;
+}
+
+
+
+/* utils  */
+.hidden {
+    display: none;
+}

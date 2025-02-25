@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <title>Add A Reminder</title>
+</head>
+<body>
+    <header>
+        <a href="index.html"> <h1>Reminder</h1> </a>
+    </header>
+
+    <section id="add-reminder-form-box">
+        <h2 class="form_header"> Reminder Form </h2>
+        <form id="add-reminder-form" class="form_style">
+            <div class="form-ele">
+                <label for="event_name">Event Name</label>
+                <input 
+                required
+                type="text"
+                id="event_name"
+                name="event_name"
+            >
+            </div>
+            <div class="form-ele">
+                <label for="event_from">Event From</label>
+                <input 
+                type="time"
+                id="event_from"
+                name="event_from"
+                >
+            </div>
+
+            <div class="form-ele">
+                <label for="event_to">Event To</label>
+                <input 
+                type="time"
+                id="event_to"
+                name="event_to"
+                >
+            </div>
+
+            <div class="form-ele">
+                <label for="reminder_date">Reminder Date</label>
+                <input 
+                type="date"
+                id="reminder_date"
+                name="reminder_date"
+                >
+            </div>
+
+            <div class="form-ele">
+                <label for="recurring_type">Recurring Type</label>
+                <select 
+                id="recurring_type" 
+                name="recurring_type"
+                >
+                    <option value="none" selected>none</option>
+                    <option value="daily">daily</option>
+                    <option value="weekly">weekly</option>
+                    <option value="monthly">monthly</option>
+                </select>
+            </div>
+
+            <div class="form-ele hidden" id="dow">
+                <label for="day_of_week"> Day of Week </label>
+                <input 
+                id="day_of_week"
+                name="day_of_week"
+                type="number" 
+                min="1" 
+                max="7">
+            </div>
+
+            <div class="form-ele hidden" id="dom">
+                <label for="day_of_month"> Day of Month </label>
+                <input 
+                id="day_of_month"
+                name="day_of_month"
+                type="number" 
+                min="1" 
+                max="31">
+            </div>
+            <button type="submit" id="add-reminder-btn" class="btn form-btn">Add!</button>
+            <p id="success-msg" class="hidden">Success!</p>
+            <p id="failure-msg" class="hidden">Failed !</p>
+        </form>
+    </section>
+
+    <script src="index.js" type="module"></script>
+
+</body>
+
+</html>
