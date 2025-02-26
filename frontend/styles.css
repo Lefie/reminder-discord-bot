@@ -278,8 +278,9 @@ footer {
 }
 
 .reminder-item p {
-    margin-left: 15px;
-    padding-top:5px;
+    margin-left: 5px;
+    padding: 5px;
+    flex:1;
 }
 
 .reminder-item span:hover {

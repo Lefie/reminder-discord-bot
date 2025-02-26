@@ -77,8 +77,6 @@ else if(edit_reminder_item_id && isEditing === "true") {
     const update_btn = document.querySelector("#update-reminder-btn")
     update_btn.addEventListener("click", async(e)=> {
         e.preventDefault()
-        console.log(document.querySelector("#event_name").value)
-        console.log(document.querySelector("#event_from").value)
         let event_name = document.querySelector("#event_name").value
         let event_from = document.querySelector("#event_from").value
         let event_to = document.querySelector("#event_to").value
@@ -161,8 +159,6 @@ else if(edit_reminder_item_id && isEditing === "true") {
         }
     
     })
-    
-    
 }
 
 
@@ -329,7 +325,7 @@ function updateRemindersUI(reminders) {
             reminders_container.removeChild(reminders_container.firstChild)
         }
     }
-    
+
     // display the input reminders 
     for ( let i = 0; i < reminders.length; i ++){
         let reminder_item = createEle("div","class","reminder-item")

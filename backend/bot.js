@@ -27,14 +27,14 @@ client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     
     // Get a channel by ID and send a message
-    const channel = client.channels.cache.get('1338630195393069188'); 
+    const channel = client.channels.cache.get(process.env.DISCORD_CHANNEL_ID); 
 
     if( !channel) {
         console.log("channel not found")
         return
     }
 
-    schedule.scheduleJob('33 * * * *', async()=>{ 
+    schedule.scheduleJob('0 0 0 * *', async()=>{ 
         // scan the database daily to check for upcoming reminders for the day
         // store all events in an array, [] 
         const reminders = await getRemindersTodayArray()
