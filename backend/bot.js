@@ -34,7 +34,7 @@ client.on('ready', () => {
         return
     }
 
-    schedule.scheduleJob('0 0 0 * *', async()=>{ 
+    schedule.scheduleJob('0 0 3 * *', async()=>{ 
         // scan the database daily to check for upcoming reminders for the day
         // store all events in an array, [] 
         const reminders = await getRemindersTodayArray()
